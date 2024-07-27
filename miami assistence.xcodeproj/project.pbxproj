@@ -93,15 +93,6 @@
 		238D3D882AC1BE460064CDDF /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D872AC1BE460064CDDF /* NoteItem.swift */; };
 		238D3D8A2AC1BE4D0064CDDF /* NoteItem+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D892AC1BE4D0064CDDF /* NoteItem+Feature.swift */; };
 		238D3D8C2AC1BE570064CDDF /* NoteItem+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D8B2AC1BE570064CDDF /* NoteItem+View.swift */; };
-		238D3D8F2AC1C4DD0064CDDF /* NoteText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D8E2AC1C4DD0064CDDF /* NoteText.swift */; };
-		238D3D942AC1C53A0064CDDF /* NoteText+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D932AC1C53A0064CDDF /* NoteText+Feature.swift */; };
-		238D3D962AC1C5420064CDDF /* NoteText+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D952AC1C5420064CDDF /* NoteText+View.swift */; };
-		238D3D982AC1C5540064CDDF /* NoteAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D972AC1C5540064CDDF /* NoteAsset.swift */; };
-		238D3D9A2AC1C55D0064CDDF /* NoteAsset+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D992AC1C55D0064CDDF /* NoteAsset+Feature.swift */; };
-		238D3D9C2AC1C5690064CDDF /* NoteAsset+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D9B2AC1C5690064CDDF /* NoteAsset+View.swift */; };
-		238D3D9E2AC1C5780064CDDF /* NoteDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D9D2AC1C5780064CDDF /* NoteDivider.swift */; };
-		238D3DA02AC1C5800064CDDF /* NoteDivider+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3D9F2AC1C5800064CDDF /* NoteDivider+Feature.swift */; };
-		238D3DA22AC1C5870064CDDF /* NoteDivider+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238D3DA12AC1C5870064CDDF /* NoteDivider+View.swift */; };
 		2390F7D32ABA973A007CCC02 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		2390F7D52ABAA42A007CCC02 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		2390F7D72ABAA55F007CCC02 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -139,6 +130,13 @@
 		23D69B0B2AD87454002684DC /* Manager+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D69B0A2AD87454002684DC /* Manager+Firebase.swift */; };
 		23D69B0E2AD874E8002684DC /* Manager+Firestore+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D69B0D2AD874E8002684DC /* Manager+Firestore+Config.swift */; };
 		23D69B112AD87528002684DC /* Manager+FirestoreClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D69B102AD87528002684DC /* Manager+FirestoreClient.swift */; };
+		23D8362A2C52CFCD00FF51D6 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D836292C52CFCA00FF51D6 /* TableView.swift */; };
+		23D8362D2C52DDED00FF51D6 /* UIViewControllerRepresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D8362C2C52DDE500FF51D6 /* UIViewControllerRepresenting.swift */; };
+		23D836742C532D6900FF51D6 /* NoteItem+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D836732C532D6200FF51D6 /* NoteItem+Delegate.swift */; };
+		23D836BC2C54634800FF51D6 /* TextProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D836BB2C54634200FF51D6 /* TextProcessor.swift */; };
+		23D836BF2C54637500FF51D6 /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 23D836BE2C54637500FF51D6 /* Markdown */; };
+		23D836C22C54639200FF51D6 /* Highlighter in Frameworks */ = {isa = PBXBuildFile; productRef = 23D836C12C54639200FF51D6 /* Highlighter */; };
+		23D836EA2C54818400FF51D6 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 23D836E92C54818400FF51D6 /* SwiftUIIntrospect */; };
 		23DEF84C2AFFF7E3007D4D21 /* HeaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DEF84B2AFFF7E3007D4D21 /* HeaderButton.swift */; };
 		23DEF84E2AFFF7EB007D4D21 /* HeaderButton+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DEF84D2AFFF7EB007D4D21 /* HeaderButton+View.swift */; };
 		23DEF8502AFFF7F3007D4D21 /* HeaderButton+Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DEF84F2AFFF7F3007D4D21 /* HeaderButton+Feature.swift */; };
@@ -307,15 +305,6 @@
 		238D3D872AC1BE460064CDDF /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
 		238D3D892AC1BE4D0064CDDF /* NoteItem+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteItem+Feature.swift"; sourceTree = "<group>"; };
 		238D3D8B2AC1BE570064CDDF /* NoteItem+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteItem+View.swift"; sourceTree = "<group>"; };
-		238D3D8E2AC1C4DD0064CDDF /* NoteText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteText.swift; sourceTree = "<group>"; };
-		238D3D932AC1C53A0064CDDF /* NoteText+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteText+Feature.swift"; sourceTree = "<group>"; };
-		238D3D952AC1C5420064CDDF /* NoteText+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteText+View.swift"; sourceTree = "<group>"; };
-		238D3D972AC1C5540064CDDF /* NoteAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteAsset.swift; sourceTree = "<group>"; };
-		238D3D992AC1C55D0064CDDF /* NoteAsset+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteAsset+Feature.swift"; sourceTree = "<group>"; };
-		238D3D9B2AC1C5690064CDDF /* NoteAsset+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteAsset+View.swift"; sourceTree = "<group>"; };
-		238D3D9D2AC1C5780064CDDF /* NoteDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDivider.swift; sourceTree = "<group>"; };
-		238D3D9F2AC1C5800064CDDF /* NoteDivider+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDivider+Feature.swift"; sourceTree = "<group>"; };
-		238D3DA12AC1C5870064CDDF /* NoteDivider+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDivider+View.swift"; sourceTree = "<group>"; };
 		23978B7B2A55DBA4002ECB4A /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		23A64EB52AD36A6E005B6344 /* Manager+SwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+SwiftData.swift"; sourceTree = "<group>"; };
 		23A64EB92AD38EA3005B6344 /* Manager+SwiftData+Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+SwiftData+Task.swift"; sourceTree = "<group>"; };
@@ -347,6 +336,10 @@
 		23D69B0A2AD87454002684DC /* Manager+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Firebase.swift"; sourceTree = "<group>"; };
 		23D69B0D2AD874E8002684DC /* Manager+Firestore+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Firestore+Config.swift"; sourceTree = "<group>"; };
 		23D69B102AD87528002684DC /* Manager+FirestoreClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+FirestoreClient.swift"; sourceTree = "<group>"; };
+		23D836292C52CFCA00FF51D6 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		23D8362C2C52DDE500FF51D6 /* UIViewControllerRepresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresenting.swift; sourceTree = "<group>"; };
+		23D836732C532D6200FF51D6 /* NoteItem+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteItem+Delegate.swift"; sourceTree = "<group>"; };
+		23D836BB2C54634200FF51D6 /* TextProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProcessor.swift; sourceTree = "<group>"; };
 		23DEF84B2AFFF7E3007D4D21 /* HeaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderButton.swift; sourceTree = "<group>"; };
 		23DEF84D2AFFF7EB007D4D21 /* HeaderButton+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeaderButton+View.swift"; sourceTree = "<group>"; };
 		23DEF84F2AFFF7F3007D4D21 /* HeaderButton+Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeaderButton+Feature.swift"; sourceTree = "<group>"; };
@@ -380,7 +373,10 @@
 			files = (
 				23BF942E2AB7EC8E00EA3F64 /* StoreKit.framework in Frameworks */,
 				23BF94282AB7E8C900EA3F64 /* OneSignalFramework in Frameworks */,
+				23D836C22C54639200FF51D6 /* Highlighter in Frameworks */,
+				23D836EA2C54818400FF51D6 /* SwiftUIIntrospect in Frameworks */,
 				235570D92AC9EF8400544671 /* ComposableArchitecture in Frameworks */,
+				23D836BF2C54637500FF51D6 /* Markdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +551,7 @@
 		23429E992A9915A400104F02 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				23D836282C52CFC500FF51D6 /* TableView */,
 				23099D542AE19B5400CC4857 /* TextView */,
 				23E6122C2AA9664800C916F1 /* MAnchorKey */,
 				236C129B2A940788002F8A66 /* Progress */,
@@ -837,6 +834,8 @@
 		237AE76F2A43A4BA005149F0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				23D836BA2C54633900FF51D6 /* Text Processor */,
+				23D8362B2C52DDDF00FF51D6 /* Navigation */,
 				23BF941E2AB7D0A700EA3F64 /* App */,
 				23BF94172AB7B5BB00EA3F64 /* Dependency */,
 				23BF94132AB6177000EA3F64 /* Async Value */,
@@ -889,52 +888,12 @@
 		238D3D862AC1BE380064CDDF /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				238D3D8D2AC1C2700064CDDF /* Components */,
 				238D3D872AC1BE460064CDDF /* NoteItem.swift */,
+				23D836732C532D6200FF51D6 /* NoteItem+Delegate.swift */,
 				238D3D892AC1BE4D0064CDDF /* NoteItem+Feature.swift */,
 				238D3D8B2AC1BE570064CDDF /* NoteItem+View.swift */,
 			);
 			path = Item;
-			sourceTree = "<group>";
-		};
-		238D3D8D2AC1C2700064CDDF /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				238D3D922AC1C5210064CDDF /* Divider */,
-				238D3D912AC1C5120064CDDF /* Asset */,
-				238D3D902AC1C4E00064CDDF /* Text */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		238D3D902AC1C4E00064CDDF /* Text */ = {
-			isa = PBXGroup;
-			children = (
-				238D3D8E2AC1C4DD0064CDDF /* NoteText.swift */,
-				238D3D932AC1C53A0064CDDF /* NoteText+Feature.swift */,
-				238D3D952AC1C5420064CDDF /* NoteText+View.swift */,
-			);
-			path = Text;
-			sourceTree = "<group>";
-		};
-		238D3D912AC1C5120064CDDF /* Asset */ = {
-			isa = PBXGroup;
-			children = (
-				238D3D972AC1C5540064CDDF /* NoteAsset.swift */,
-				238D3D992AC1C55D0064CDDF /* NoteAsset+Feature.swift */,
-				238D3D9B2AC1C5690064CDDF /* NoteAsset+View.swift */,
-			);
-			path = Asset;
-			sourceTree = "<group>";
-		};
-		238D3D922AC1C5210064CDDF /* Divider */ = {
-			isa = PBXGroup;
-			children = (
-				238D3D9D2AC1C5780064CDDF /* NoteDivider.swift */,
-				238D3D9F2AC1C5800064CDDF /* NoteDivider+Feature.swift */,
-				238D3DA12AC1C5870064CDDF /* NoteDivider+View.swift */,
-			);
-			path = Divider;
 			sourceTree = "<group>";
 		};
 		23978B782A55D694002ECB4A /* News */ = {
@@ -1106,6 +1065,30 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
+		23D836282C52CFC500FF51D6 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				23D836292C52CFCA00FF51D6 /* TableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		23D8362B2C52DDDF00FF51D6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				23D8362C2C52DDE500FF51D6 /* UIViewControllerRepresenting.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		23D836BA2C54633900FF51D6 /* Text Processor */ = {
+			isa = PBXGroup;
+			children = (
+				23D836BB2C54634200FF51D6 /* TextProcessor.swift */,
+			);
+			path = "Text Processor";
+			sourceTree = "<group>";
+		};
 		23DEF84A2AFFF7CF007D4D21 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -1222,6 +1205,9 @@
 			packageProductDependencies = (
 				23BF94272AB7E8C900EA3F64 /* OneSignalFramework */,
 				235570D82AC9EF8400544671 /* ComposableArchitecture */,
+				23D836BE2C54637500FF51D6 /* Markdown */,
+				23D836C12C54639200FF51D6 /* Highlighter */,
+				23D836E92C54818400FF51D6 /* SwiftUIIntrospect */,
 			);
 			productName = "miami assistence";
 			productReference = 237265282A3BC8EE004F4B3D /* miami assistence.app */;
@@ -1308,7 +1294,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					237265272A3BC8EE004F4B3D = {
 						CreatedOnToolsVersion = 15.0;
@@ -1342,6 +1328,9 @@
 			packageReferences = (
 				237B60932A4886860058B18E /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 				235570D72AC9ED9600544671 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				23D836BD2C54637500FF51D6 /* XCRemoteSwiftPackageReference "swift-markdown" */,
+				23D836C02C54639200FF51D6 /* XCRemoteSwiftPackageReference "HighlighterSwift" */,
+				23D836E82C54818400FF51D6 /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 			);
 			productRefGroup = 237265292A3BC8EE004F4B3D /* Products */;
 			projectDirPath = "";
@@ -1422,7 +1411,6 @@
 				23BF94222AB7D1A300EA3F64 /* CoreApp+Feature.swift in Sources */,
 				23DEF84C2AFFF7E3007D4D21 /* HeaderButton.swift in Sources */,
 				236C128E2A91BBB9002F8A66 /* Note.swift in Sources */,
-				238D3DA22AC1C5870064CDDF /* NoteDivider+View.swift in Sources */,
 				2390F7D32ABA973A007CCC02 /* (null) in Sources */,
 				2340DEDE2AB60A8C00F42FCE /* Dependency+Extension.swift in Sources */,
 				234749462A953CF400B19513 /* ScrollViewDetector.swift in Sources */,
@@ -1434,13 +1422,14 @@
 				23D69B092AD87409002684DC /* Manager+Analitycs.swift in Sources */,
 				2322C82A2AA78496000F0576 /* Tag+Model.swift in Sources */,
 				2354BE0A2A73ECE4003E4CA9 /* Miami Assistence App.swift in Sources */,
+				23D8362A2C52CFCD00FF51D6 /* TableView.swift in Sources */,
 				236C127D2A90F7E1002F8A66 /* Task Create+View.swift in Sources */,
-				238D3D8F2AC1C4DD0064CDDF /* NoteText.swift in Sources */,
 				23E2D19D2A71CBDE00180C1C /* CreateTypeCompany.swift in Sources */,
 				236C12922A91BBCD002F8A66 /* Note+View.swift in Sources */,
 				2390F7D52ABAA42A007CCC02 /* (null) in Sources */,
 				231E6C9D2A8F1964009569C1 /* ScaleButtonStyle.swift in Sources */,
 				2354BE092A73ECE4003E4CA9 /* CoreApp+Delegate.swift in Sources */,
+				23D8362D2C52DDED00FF51D6 /* UIViewControllerRepresenting.swift in Sources */,
 				231E6C9B2A8F1942009569C1 /* PressBorderedButtonStyle.swift in Sources */,
 				23AC6D752AA51D2D0000D04B /* Empty+View.swift in Sources */,
 				23DEF8532B0023A2007D4D21 /* HeaderGoalProgress.swift in Sources */,
@@ -1448,14 +1437,13 @@
 				2306FDA12A8FD350002F323D /* Header.swift in Sources */,
 				23DEF8632B00E265007D4D21 /* TaskInfo+Feature.swift in Sources */,
 				236C12902A91BBC6002F8A66 /* Note+Feature.swift in Sources */,
+				23D836742C532D6900FF51D6 /* NoteItem+Delegate.swift in Sources */,
 				23BB78572ABB5C6B00EB11DE /* Settings+Feature.swift in Sources */,
 				23BB78612ABB7B6500EB11DE /* URL+Extension.swift in Sources */,
 				23BB78652ABCC5AB00EB11DE /* HeaderSlider.swift in Sources */,
 				2306FD9B2A8FCFFB002F323D /* Task+View.swift in Sources */,
 				236C12812A917577002F8A66 /* HeaderToday.swift in Sources */,
 				23582F5D2A71E9F900FDF7FE /* Home+Feature.swift in Sources */,
-				238D3D9E2AC1C5780064CDDF /* NoteDivider.swift in Sources */,
-				238D3D962AC1C5420064CDDF /* NoteText+View.swift in Sources */,
 				23E2D1952A71BEDB00180C1C /* CreateCompany.swift in Sources */,
 				23BB78592ABB5C7200EB11DE /* Settings+View.swift in Sources */,
 				23A64EBA2AD38EA3005B6344 /* Manager+SwiftData+Task.swift in Sources */,
@@ -1470,7 +1458,6 @@
 				23E6122B2AA9441E00C916F1 /* UIToolbar.swift in Sources */,
 				2340DED62AB6079300F42FCE /* Manager.swift in Sources */,
 				23E2D19F2A71CC6300180C1C /* CreateTypeCompany+Feature.swift in Sources */,
-				238D3D982AC1C5540064CDDF /* NoteAsset.swift in Sources */,
 				23DEF85F2B00E255007D4D21 /* TaskInfo.swift in Sources */,
 				23DEF84E2AFFF7EB007D4D21 /* HeaderButton+View.swift in Sources */,
 				2340DECA2AB359D000F42FCE /* Task Calendar+Feature.swift in Sources */,
@@ -1488,10 +1475,10 @@
 				23BF94242AB7D9C100EA3F64 /* CoreApp+Scene.swift in Sources */,
 				236C127B2A90F7D8002F8A66 /* Task Create+Feature.swift in Sources */,
 				23582F592A71E53E00FDF7FE /* Root+Feature.swift in Sources */,
+				23D836BC2C54634800FF51D6 /* TextProcessor.swift in Sources */,
 				23BB78552ABB5C6300EB11DE /* Settings.swift in Sources */,
 				23C2A0E62A97CBF70073E5FC /* ImpactFeedbackGenerator+Extensions.swift in Sources */,
 				23582F532A71E50600FDF7FE /* Root.swift in Sources */,
-				238D3D9A2AC1C55D0064CDDF /* NoteAsset+Feature.swift in Sources */,
 				23DEF8502AFFF7F3007D4D21 /* HeaderButton+Feature.swift in Sources */,
 				2340DEC72AB359B300F42FCE /* Task Calendar.swift in Sources */,
 				23BB78692ABCC5B900EB11DE /* HeaderSlider+View.swift in Sources */,
@@ -1523,7 +1510,6 @@
 				236C12962A939116002F8A66 /* Home+Destination.swift in Sources */,
 				2306FDA52A8FD5E6002F323D /* Header+View.swift in Sources */,
 				236F8C032AA69AF2006CC1BA /* Schedule.swift in Sources */,
-				238D3DA02AC1C5800064CDDF /* NoteDivider+Feature.swift in Sources */,
 				23E2D1972A71BEFD00180C1C /* CreateCompany+Feature.swift in Sources */,
 				2306FDA72A8FD5F4002F323D /* BottomSheet+Feature.swift in Sources */,
 				23BF941D2AB7BE1D00EA3F64 /* Manager+UserDefaults.swift in Sources */,
@@ -1535,11 +1521,9 @@
 				23D69B0B2AD87454002684DC /* Manager+Firebase.swift in Sources */,
 				235991852A715EFE00C2677A /* Onboarding.swift in Sources */,
 				23BF94322AB8EDAC00EA3F64 /* Text+Extension.swift in Sources */,
-				238D3D9C2AC1C5690064CDDF /* NoteAsset+View.swift in Sources */,
 				23E2D1A12A71CD1B00180C1C /* CreateTypeCompany+View.swift in Sources */,
 				23582F5B2A71E9E600FDF7FE /* Home.swift in Sources */,
 				235991872A715F0400C2677A /* Onboarding+View.swift in Sources */,
-				238D3D942AC1C53A0064CDDF /* NoteText+Feature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1727,7 +1711,6 @@
 		2372654D2A3BC8EF004F4B3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
@@ -1764,7 +1747,6 @@
 		2372654E2A3BC8EF004F4B3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
@@ -1801,7 +1783,6 @@
 		237265502A3BC8EF004F4B3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1821,7 +1802,6 @@
 		237265512A3BC8EF004F4B3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1841,7 +1821,6 @@
 		237265532A3BC8EF004F4B3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z42V6W967K;
@@ -1859,7 +1838,6 @@
 		237265542A3BC8EF004F4B3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z42V6W967K;
@@ -2062,6 +2040,30 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		23D836BD2C54637500FF51D6 /* XCRemoteSwiftPackageReference "swift-markdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:swiftlang/swift-markdown.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		23D836C02C54639200FF51D6 /* XCRemoteSwiftPackageReference "HighlighterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:smittytone/HighlighterSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.5;
+			};
+		};
+		23D836E82C54818400FF51D6 /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:siteline/swiftui-introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2079,6 +2081,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 237B60932A4886860058B18E /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
 			productName = OneSignalExtension;
+		};
+		23D836BE2C54637500FF51D6 /* Markdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23D836BD2C54637500FF51D6 /* XCRemoteSwiftPackageReference "swift-markdown" */;
+			productName = Markdown;
+		};
+		23D836C12C54639200FF51D6 /* Highlighter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23D836C02C54639200FF51D6 /* XCRemoteSwiftPackageReference "HighlighterSwift" */;
+			productName = Highlighter;
+		};
+		23D836E92C54818400FF51D6 /* SwiftUIIntrospect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23D836E82C54818400FF51D6 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = SwiftUIIntrospect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

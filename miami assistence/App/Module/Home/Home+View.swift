@@ -30,8 +30,11 @@ extension Home {
                     }
                     
                 case .note:
-                    CaseLet(/Destination.State.note, action: Destination.Action.note) {
-                        Note.View(store: $0)
+                    CaseLet(/Destination.State.note, action: Destination.Action.note) { store in
+//                        Note.View(store: $0)
+                        UIViewControllerRepresenting {
+                            Note.ViewController(store: store)
+                        }
                     }
                 }
             }

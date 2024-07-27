@@ -10,82 +10,71 @@ import SwiftUI
 import SwiftData
 
 extension Note {
-    struct Model: Equatable, Identifiable, Codable {
-        var id = UUID()
-        var author: String
-        var item: [Item]
+    enum BlockType: String, Equatable {
+        case text, image, video, list, table, header, quote, link, embed
+    }
+    
+    struct Block: Identifiable, Equatable {
+        var id: UUID = UUID()
+        var type: BlockType
+        var content: String?
+        var contentCache: NSAttributedString?
+        var textAttributes: [TextAttribute]?
+        var mediaAttributes: MediaBlockAttributes?
+        var fileMetadata: FileMetadata?
+        var children: [Block] = []
+        var metadata: BlockMetadata
+    }
+    
+    struct TextAttribute: Equatable {
+        var range: NSRange
+        var styles: [TextStyle]
+    }
 
-        struct Item: Equatable, Identifiable, Codable {
-            var id = UUID()
-            var block: Block
-            
-            struct Block: Equatable, Identifiable, Codable {
-                var id = UUID()
-                var type: BlockType
-                var text: Text?
-                var asset: Asset?
-                var line: Line?
-                var background: Background
-                var isMarked: Bool
-                var alignment: Alignment
-                
-                
-                enum Line: Equatable, Codable {
-                    case strong
-                    case regular
-                    case light
-                    case dashed
-                }
-                
-                struct Asset: Equatable, Identifiable, Codable {
-                    var id = UUID()
-                    var asset: String
-                }
-                
-                enum Background: Equatable, Codable {
-                    case normal
-                    case focus
-                    case box
-                    case card
-                }
-                
-                enum BlockType: Equatable, Codable {
-                    case empty
-                    case image
-                    case text
-                    case separator
-                }
-                
-                enum Alignment: Equatable, Codable {
-                    case justify
-                    case leading
-                    case trailing
-                    case center
-                }
-                
-                struct Text: Equatable, Identifiable, Codable {
-                    var id = UUID()
-                    var size: FontSize
-                    var fontWeight: FontWeight
-                    var text: String
-                    
-                    enum FontSize: Equatable, Codable {
-                        case title
-                        case subTitle
-                        case heading
-                        case body
-                        case caption
-                    }
-                    
-                    enum FontWeight: Equatable, Codable {
-                        case bold
-                        case normal
-                        case regular
-                        case medium
-                        case tiny
-                    }
-                }
-            }
-        }
+    enum TextStyle: Equatable {
+        case bold
+        case italic
+        case underline
+        case strikethrough
+        case fontSize(Int)
+        case fontName(String)
+        case textColor(String)
+        case backgroundColor(String)
+        case link(URL)
+    }
+
+    struct MediaBlockAttributes: Equatable {
+        var src: URL
+        var storagePath: String?
+        var altText: String?
+        var width: Int?
+        var height: Int?
+        var caption: String?
+        var mimeType: String?
+        var accessLevel: AccessLevel
+    }
+
+    enum AccessLevel: Equatable {
+        case `public`, restricted, `private`
+    }
+
+    struct FileMetadata: Equatable {
+        var lastModified: Date = Date()
+        var createdBy: String
+        var version: String?
+        var checksum: String?
+        var tags: [String] = []
+    }
+
+    struct BlockMetadata: Equatable {
+        var createdDate: Date = Date()
+        var modifiedDate: Date = Date()
+        var author: String
+        var tags: [String] = []
+    }
+    
+    struct DocumentModel: Identifiable, Equatable {
+        var id: UUID = UUID()
+        var blocks: Block
     }
 }

@@ -15,29 +15,36 @@ extension NoteItem {
         @ObservableState
         struct State: Equatable, Identifiable {
             var id = UUID()
-            var text: NoteText.Feature.State?
-            var asset: NoteAsset.Feature.State?
-            var divider: NoteDivider.Feature.State?
+            var hasFocus: Bool = true
+            var blockForChangeKeyboard: Bool = false
+            
+            var block: Note.Block
         }
         
         @CasePathable
         enum Action: Equatable {
-            case text(NoteText.Feature.Action)
-            case asset(NoteAsset.Feature.Action)
-            case divider(NoteDivider.Feature.Action)
+            case onAppear
+            case blockKeyboard(Bool)
+            
+            case blockContent(String, NSAttributedString)
         }
         
         var body: some Reducer<State, Action> {
-            EmptyReducer()
-                .ifLet(\.text, action: /Action.text) {
-                    NoteText.Feature()
+            Reduce { state, action in
+                switch action {
+                case .blockKeyboard(let isBlock):
+                    state.blockForChangeKeyboard = isBlock
+                    
+                    return .none
+                case let .blockContent(content, attribute):
+                    state.block.content = content
+                    state.block.contentCache = attribute
+                    
+                    return .none
+                default:
+                    return .none
                 }
-                .ifLet(\.asset, action: /Action.asset) {
-                    NoteAsset.Feature()
-                }
-                .ifLet(\.divider, action: /Action.divider) {
-                    NoteDivider.Feature()
-                }
+            }
         }
     }
 }

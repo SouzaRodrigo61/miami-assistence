@@ -9,34 +9,43 @@ import ComposableArchitecture
 import Foundation
 
 extension Note {
+    
     @Reducer
     struct Feature {
+        @ObservableState
         struct State: Equatable {
-            var note: Note.Model = .init(author: "", item: [])
-            
-            var item: IdentifiedArrayOf<NoteItem.Feature.State> = []
+            var blocks: IdentifiedArrayOf<NoteItem.Feature.State> = []
         }
         
         @CasePathable
-        enum Action: Equatable {
-            case item(IdentifiedActionOf<NoteItem.Feature>)
+        enum Action: ViewAction, Equatable {
+            
+            case blocks(IdentifiedActionOf<NoteItem.Feature>)
             
             case onAppear
             case closeTapped
-            case addBlock
             
+            case moveToLast
             case saveNote(Task.Model)
+            
+            
+            case view(View)
+
+            enum View: Equatable {
+                case addBlockTapped
+                case removeBlockTapped(UUID)
+            }
         }
         
         @Dependency(\.dismiss) var dismiss
         
         var body: some Reducer<State, Action> {
             Reduce(self.core)
-                .forEach(\.item, action: \.item) {
+                .forEach(\.blocks, action: \.blocks) {
                     NoteItem.Feature()
                 }
+                ._printChanges()
         }
-        
         
         private func core(into state: inout State, action: Action) -> Effect<Action> {
             switch action {
@@ -47,38 +56,15 @@ extension Note {
                 return .run { send in
                     await dismiss()
                 }
-            case .addBlock:
-                
-                if let lastItem = state.note.item.last {
-                    if lastItem.block.type == .text, let text = lastItem.block.text, text.text.isEmpty {
-                        
-                        return .none
-                    }
-                }
-                
-                
-//                let count = state.note.item.count
-                
-                let content: Note.Model.Item.Block = .init(type: .text, text: .init(size: .body, fontWeight: .normal, text: ""), background: .normal, isMarked: false, alignment: .leading)
-                
-                state.note.item.append(.init(block: content))
-                
-                guard let value = content.text else { return .none }
-                
-                state.item.append(.init(id: content.id, text: .init(content: .init(id: value.id, size: value.size, fontWeight: value.fontWeight, text: value.text))))
+            case .view(.addBlockTapped):
+                // TODO: Configurar corretamente o metadata
+                state.blocks.append(.init(block: .init(type: .text, metadata: .init(author: "Rodrigo"))))
                 
                 return .none
-                
-            case .item(.element(id: _, action: .text(.updatedContent(_)))):
-                return .none
-                
-            case .item(.element(id: _, action: .text(.removeLine))):
+            case .view(.removeBlockTapped(let uid)):
+                state.blocks[id: uid] = nil
                 
                 return .none
-                
-            case .item(.element(id: _, action: .text(.nextLine))):
-                
-                return .send(.addBlock)
             default:
                 return .none
             }

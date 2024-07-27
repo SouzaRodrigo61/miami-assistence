@@ -87,9 +87,9 @@ extension SwipeAction {
                     HStack(spacing: 0) {
                         ForEach(actions) { button in
                             Button {
-                                SwiftUI.Task {
+                                _Concurrency.Task {
                                     resetPosition()
-                                    try? await SwiftUI.Task.sleep(for: .seconds(0.25))
+                                    try? await _Concurrency.Task.sleep(for: .seconds(0.25))
                                     button.action()
                                 }
                             } label: {
@@ -110,9 +110,9 @@ extension SwipeAction {
         /// Block scrolling
         func scrollOffset(_ proxy: GeometryProxy) -> CGFloat {
             let minX = proxy.frame(in: .scrollView(axis: .horizontal)).minX
-            
             return direction == .trailing ? (minX > 0 ? -minX : 0) : (minX < 0 ? -minX : 0)
         }
+        
     }
     
     struct Action: Identifiable {

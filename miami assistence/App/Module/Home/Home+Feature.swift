@@ -84,7 +84,7 @@ extension Home {
             case .destination(.element(id: _, action: .note(.closeTapped))):
                 state.taskCalendar.forcePadding = true
                 return .run { send in
-                    try! await SwiftUI.Task.sleep(for: .seconds(0.04))
+                    try! await _Concurrency.Task.sleep(for: .seconds(0.04))
                     await send(.taskCalendar(.matcheAnimationRemoved), animation: .smooth)
                 }
             case .destination(.element(id: _, action: .note(.saveNote(let newTask)))):

@@ -1,5 +1,5 @@
 {
-  "originHash" : "6b2f95154e1eb04754b85f31fe55a42ada716216dc92a299c5d258fab97f3345",
+  "originHash" : "48d486735e46bedbc7058593286acc6bf307190fde8184175ea3427302c9ddd4",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "9dc9cbe4bc45c65164fa653a563d8d8db61b09bb",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "highlighterswift",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:smittytone/HighlighterSwift.git",
+      "state" : {
+        "revision" : "e447ac75b40f6ecbed0cfb5bdc55abfbf07aa81a",
+        "version" : "1.1.5"
       }
     },
     {
@@ -35,6 +44,15 @@
       "state" : {
         "revision" : "d1fd837326aa719bee979bdde1f53cd5797443eb",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-cmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-cmark.git",
+      "state" : {
+        "revision" : "3bc2f3e25df0cecc5dc269f7ccae65d0f386f06a",
+        "version" : "0.4.0"
       }
     },
     {
@@ -92,6 +110,15 @@
       }
     },
     {
+      "identity" : "swift-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:swiftlang/swift-markdown.git",
+      "state" : {
+        "revision" : "4aae40bf6fff5286e0e1672329d17824ce16e081",
+        "version" : "0.4.0"
+      }
+    },
+    {
       "identity" : "swift-perception",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-perception",
@@ -107,6 +134,15 @@
       "state" : {
         "revision" : "303e5c5c36d6a558407d364878df131c3546fad8",
         "version" : "510.0.2"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:siteline/swiftui-introspect.git",
+      "state" : {
+        "revision" : "807f73ce09a9b9723f12385e592b4e0aaebd3336",
+        "version" : "1.3.0"
       }
     },
     {
